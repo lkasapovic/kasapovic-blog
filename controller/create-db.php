@@ -6,7 +6,7 @@
     
     // telling the connection to die if something went wrong
     if($connection->connect_error) {
-       die("Error: " . $connectioon->connect_error); 
+       die("<p>Error: " . $connectioon->connect_error . "</p>"); 
     }
     
     $exists = $connection->select_db($database);
@@ -16,12 +16,12 @@
         $query = $connection->query("CREATE DATABASE $database");
         
         if($query){
-            echo "Successfully created database" . $database;
+            echo "<p>Successfully created database" . $database . "</p>";
         }
         
     }
     else{
-        echo "Database already exists.";
+        echo "<p>Database already exists.</p>";
     }
     // every post will need an 'id', a 'title', and a 'post text'
     $query = $connection-> query("CREATE TABLE posts ("
@@ -35,7 +35,7 @@
             . "PRIMARY KEY (id))");
     
     if($query) {
-        echo "Succesfully create table: posts";
+        echo "<p>Succesfully create table: posts</p>";
     }
     else {
         echo "<p>$connection->error</p>";
