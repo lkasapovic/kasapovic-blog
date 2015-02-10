@@ -5,7 +5,7 @@ require_once(__DIR__ . "/../model/config.php");
 //'new' allows to build objects
 $connection = new mysqli($host, $username, $password);
 
-// telling the connection to die if something went wrong
+// telling the connection to die if something goes wrong
 if ($connection->connect_error) {
     die("<p>Error: " . $connectioon->connect_error . "</p>");
 }
