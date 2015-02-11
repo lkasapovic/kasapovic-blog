@@ -2,26 +2,6 @@
 
 require_once(__DIR__ . "/../model/config.php");
 
-//'new' allows to build objects
-$connection = new mysqli($host, $username, $password);
-
-// telling the connection to die if something goes wrong
-if ($connection->connect_error) {
-    die("<p>Error: " . $connectioon->connect_error . "</p>");
-}
-
-$exists = $connection->select_db($database);
-
-// action statement has to be uppercase with query
-if (!$exists) {
-    $query = $connection->query("CREATE DATABASE $database");
-
-    if ($query) {
-        echo "<p>Successfully created database" . $database . "</p>";
-    }
-} else {
-    echo "<p>Database already exists.</p>";
-}
 // every post will need an 'id', a 'title', and a 'post text'
 $query = $connection->query("CREATE TABLE posts ("
         // null means it cant be empty 
@@ -39,4 +19,3 @@ if ($query) {
     echo "<p>$connection->error</p>";
 }
 
-$connection->close();
