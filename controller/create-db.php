@@ -3,7 +3,7 @@
 require_once(__DIR__ . "/../model/config.php");
 
 // every post will need an 'id', a 'title', and a 'post text'
-$query = $connection->query("CREATE TABLE posts ("
+$query = $_SESSION["connection"]->query("CREATE TABLE posts ("
         // null means it cant be empty 
         // AUTO_INCREMENT handles the id        
         . "id int(11) NOT NULL AUTO_INCREMENT,"
@@ -16,6 +16,6 @@ $query = $connection->query("CREATE TABLE posts ("
 if ($query) {
     echo "<p>Succesfully create table: posts</p>";
 } else {
-    echo "<p>$connection->error</p>";
+    echo "<p>" . $_SESSION["connection"]->error . "</p>";
 }
 

@@ -11,6 +11,8 @@
     $password = "root";
     // the name of the database, blog database
     $database = "blog_db";
-
-    $connection = new Database($host, $username, $password, $database);
-    $_SESSION["connection"];
+    
+    if(!isset($_SESSION["connection"])) {
+        $connection = new Database($host, $username, $password, $database);
+        $_SESSION["connection"] = $connection;
+    }
