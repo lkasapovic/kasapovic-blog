@@ -2,6 +2,9 @@
     require_once(__DIR__ . "/database.php");
     session_start();
     
+    // everytime this file is called its going to regenerate the id
+    session_regenerate_id(true);
+    
     $path = "/kasapovic-blog/";
     
     // host that is running our server
