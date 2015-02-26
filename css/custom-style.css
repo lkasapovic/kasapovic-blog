@@ -1,0 +1,46 @@
+/* background color */
+#h1 {
+    background-color: bisque;
+}
+index.html {
+    border-style: groove;
+    border-width: 4px;
+    padding: 35px;
+}
+
+.list-group-item {
+    border: 0;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+/* alligning the text to the center */
+html {
+    text-align: center;
+    font-size: 65px;
+}
+
+/* background image and body color */
+body {
+    background: url("http://www.pageresource.com/wallpapers/wallpaper/blue-volkswagen-transporter-vintage-car-graphy_409511.jpg");
+    color: black;
+}
+
+
+/* font size and colr for the h3s */
+h3 {
+    font-size: 17px;
+    color: darkviolet;
+}
+
+
+/* font size for h1*/
+h1{
+    font-size: 50px;
+}
+
+#no{
+    color: white;
+    font-size: 25px;
+    font-style: oblique;
+}
